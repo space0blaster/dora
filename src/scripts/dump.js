@@ -52,15 +52,15 @@ class FilesInterface {
                         embeddedMetadata=await collection.count();
                         E.get('indexed').innerHTML='<b>Target Directory</b>: '+config.targetDirectory+'<br/><b>Files Indexed</b>: '+H.numberNotation(indexedFiles, {notation:'short'})+'<br/><b>Metadata Embedded</b>: '+H.numberNotation(embeddedMetadata,{notation:'short'});
                     }
-                    else FilesInterface.index(config.targetDirectory);
+                    else FilesInterface.index();
                 }
                 else {
-                    FilesInterface.index(config.targetDirectory);
+                    FilesInterface.index();
                 }
             }
         });
     }
-    static index(targetDirectory) {
+    static index() {
         let indexed={
             targetDirectory:config.targetDirectory,
             model:config.embedModel,

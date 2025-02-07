@@ -27,10 +27,13 @@ The `start.sh` will do the following:
 3. Install the Electron app dependencies.
 4. Run the Electron app.
 
+**Important**: If you already have Ollama and/or ChromaDB running, please spin them down first. If not, the ports will have conflicts and it will not work. If you'd rather use your existing Ollama and/or ChromaDB services, see the Without Docker section below.
+
 To run the `start.sh` script:
 ```bash
 sh start.sh
 ```
+
 
 ### Without Docker
 Assuming you already have Ollama and ChromaDB installed and running, you can simply just run the below commands to run the electron app by itself.
@@ -65,6 +68,19 @@ This will reset the crawler and embed function.
 Use absolute paths.
 
 ---
+
+### Packaging The App
+You can package the app for yourself as an application so you have an executable. Please note, if you do this, you'll still have to run the Docker images for the services for the executable to work.
+
+To package the app:
+```bash
+npm run make
+```
+
+This will output your executable to a new sub folder in the `dora` directory located in `dora/out` and then the folder specific to your system architecture.
+
+---
+
 
 ## Notes
 1. If you have a lot of files here, I recommend pointing it to something less dense so you can try Dora out first without the crawler running for a long time; you can change this later.
