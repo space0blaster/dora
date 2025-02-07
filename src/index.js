@@ -1,6 +1,13 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('node:path');
 
+let titleBarVisibility='hidden';
+let transparency=true;
+if(process.platform !== 'darwin') {
+  titleBarVisibility='visible';
+  transparency=false;
+}
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if(require('electron-squirrel-startup')) app.quit();
 
@@ -10,14 +17,14 @@ const createSettingsWindow=()=>{
   const settingsWindow = new BrowserWindow({
     width: 425,
     height: 500,
-    titleBarStyle:'hidden',
+    titleBarStyle:titleBarVisibility,
     trafficLightPosition:{x:10,y:10},
     webPreferences: {
       //preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
       contextIsolation: false,
     },
-    transparent: true,
+    transparent: transparency,
   });
   settingsWindow.loadFile(path.join(__dirname, 'settings.html'));
   settingsWindowId=settingsWindow.id;
@@ -26,14 +33,14 @@ const createMainWindow = () => {
   const mainWindow=new BrowserWindow({
     width: 900,
     height: 550,
-    titleBarStyle:'hidden',
+    titleBarStyle:titleBarVisibility,
     trafficLightPosition:{x:10,y:10},
     webPreferences: {
       //preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
       contextIsolation: false,
     },
-    transparent: true,
+    transparent: transparency,
   });
   mainWindowId=mainWindow.id;
 
