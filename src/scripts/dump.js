@@ -70,7 +70,7 @@ class FilesInterface {
             let items=fs.readdirSync(dir);
             if(items && items.length>0) {
                 items.forEach((item)=>{
-                    if(['.DS_Store','.localized'].indexOf(item)===-1) {
+                    if(['.DS_Store','.localized','.idea','node_modules'].indexOf(item)===-1) {
                         let stats=fs.statSync(path.join(dir,item));
                         if(stats.blocks===0 && item.indexOf('.')===-1) walk(path.join(dir,item));
                         else {
