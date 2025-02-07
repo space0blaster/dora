@@ -1,0 +1,18 @@
+services:
+
+  ollama:
+    image: ollama/ollama
+    restart: always
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+
+  chromadb:
+    image: chromadb/chroma
+    restart: always
+    ports:
+      - "8000:8000"
+
+volumes:
+  ollama: {}

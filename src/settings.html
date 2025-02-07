@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Settings</title>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/settings.css" type="text/css" />
+    <script src="scripts/e.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <script>
+        const {ipcRenderer,shell}=require('electron');
+        const {Ollama}=require('ollama');
+        const os=require('os');
+        const fs=require('fs');
+        const path=require('path');
+        const {ChromaClient}=require('chromadb');
+    </script>
+    <script src="https://kit.fontawesome.com/c7e1e17f8b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div id="bar"></div>
+
+<div id="settingsTitle">Settings</div>
+<div id="settings">
+    <br/>
+    <table align="center" width="90%">
+        <tr>
+            <td><div class="settingsLabel"><i class="fa-solid fa-folder"></i> Target Directory</div></td>
+            <td><input type="text" class="settingsField" id="targetDirectory" placeholder="Target Directory" /></td>
+        </tr>
+        <tr>
+            <td><br/></td>
+            <td><br/></td>
+        </tr>
+        <tr>
+            <td><div class="settingsLabel"><i class="fa-solid fa-brain-circuit"></i> Ollama Host</div></td>
+            <td><input type="text" class="settingsField" id="ollamaHost" placeholder="Ollama Host" value="localhost" /></td>
+        </tr>
+        <tr>
+            <td><div class="settingsLabel"><i class="fa-solid fa-brain-circuit"></i> Ollama Port</div></td>
+            <td><input type="number" class="settingsField" id="ollamaPort" placeholder="Ollama Port" value="11434" /></td>
+        </tr>
+        <tr>
+            <td><br/></td>
+            <td><br/></td>
+        </tr>
+        <tr>
+            <td><div class="settingsLabel"><i class="fa-solid fa-database"></i> Chroma Host</div></td>
+            <td><input type="text" class="settingsField" id="chromaHost" placeholder="Chroma Port" value="localhost" /></td>
+        </tr>
+        <tr>
+            <td><div class="settingsLabel"><i class="fa-solid fa-database"></i> Chroma Port</div></td>
+            <td><input type="number" class="settingsField" id="chromaPort" placeholder="Chroma Port" value="8000" /></td>
+        </tr>
+        <tr>
+            <td><br/></td>
+            <td><br/></td>
+        </tr>
+        <tr>
+            <td><div class="settingsLabel"><i class="fa-solid fa-square-binary"></i> Embed Model</div></td>
+            <td><select class="settingsField" id="embedModel"></select></td>
+        </tr>
+        <tr>
+            <td><div class="settingsLabel"><i class="fa-solid fa-comment"></i> Chat Model</div></td>
+            <td><select class="settingsField" id="chatModel"></select></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button class="settingsButton" id="settingsButton">Save</button></td>
+        </tr>
+    </table>
+</div>
+
+<script src="scripts/env.js"></script>
+<script src="scripts/settings.js"></script>
+</body>
+</html>

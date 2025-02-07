@@ -1,0 +1,116 @@
+#dump{
+    z-index:2;
+    position:fixed;
+    top:20px;
+    left:10px;
+    right:420px;
+    bottom:100px;
+    border-radius:20px;
+    border:1px solid transparent;
+}
+#pathIndicator{
+    position:absolute;
+    top:20px;
+    padding:5px;
+    left:20px;
+    right:20px;
+}
+#files{
+    position:absolute;
+    top:60px;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow-y:auto;
+}
+#filesGrid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+#files::-webkit-scrollbar{
+    display:none;
+}
+.pathIndicatorFolder{
+    font-family:'Teachers',sans-serif;
+    font-size:14px;
+    color:#444444;
+    cursor:pointer;
+}
+.pathIndicatorFolder:hover{
+    text-decoration:underline;
+}
+.gridItem{
+    text-align:center;
+    width:100px;
+}
+.gridItemIcon{
+    font-size:50px;
+    color:#777777;
+}
+.gridItemThumb{
+    max-height:50px;
+    max-width:50px;
+    cursor:pointer;
+}
+.gridItemName{
+    font-size:13px;
+    font-family:'Teachers',sans-serif;
+    color:#444444;
+}
+
+#indexed{
+    position:fixed;
+    left:20px;
+    bottom:30px;
+    width:fit-content;
+    font-family:'Teachers',sans-serif;
+    color:#555555;
+    border-left:2px solid #CCCCCC;
+    font-size:14px;
+    padding:5px;
+}
+#progress{
+    position:fixed;
+    left:20px;
+    bottom:10px;
+    height:7px;
+    border:1px solid #CCCCCC;
+    right:420px;
+    padding:2px;
+    border-radius:4px;
+}
+#progressInner{
+    background:#CCCCCC;
+    height:100%;
+    border-radius:3px;
+    width:0;
+}
+
+@media (prefers-color-scheme: dark) {
+    .pathIndicatorFolder{
+        color:#777777;
+    }
+
+    .gridItemThumb{
+        color:#777777;
+    }
+    .gridItemName{
+        color:#DDDDDD;
+    }
+
+    #indexed{
+        color:#999999;
+        border-left:4px solid #555555;
+    }
+
+    #progress{
+        border:1px solid #777777;
+    }
+    #progressInner{
+        background:#999999;
+        height:100%;
+        border-radius:3px;
+        width:0;
+    }
+}

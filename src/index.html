@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dora</title>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/chat.css" type="text/css" />
+    <link rel="stylesheet" href="style/dump.css" type="text/css" />
+    <script src="scripts/e.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <script>
+      const {ipcRenderer,shell} = require('electron');
+      const {Ollama}=require('ollama');
+      const os=require('os');
+      const fs=require('fs');
+      const path=require('path');
+      const {ChromaClient}=require('chromadb');
+      const uuid=require('uuid');
+      const md5=require('md5');
+    </script>
+    <script src="https://kit.fontawesome.com/c7e1e17f8b.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div id="bar"></div>
+
+    <div id="dump">
+      <div id="pathIndicator"></div>
+      <div id="files">
+        <div id="filesGrid"></div>
+      </div>
+    </div>
+
+    <div id="chat">
+      <div id="response"></div>
+      <div id="inputBox">
+        <input id="input" type="text" placeholder="What would you like to find?" />
+        <div>
+          <button class="inputButton" id="clear"><i class="fa-regular fa-broom-wide"></i> Clear Chat</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="indexed"></div>
+    <div id="progress"><div id="progressInner"></div></div>
+    <button id="settings"><i class="fa-solid fa-gear"></i></button>
+  </body>
+
+<script src="scripts/env.js"></script>
+<script src="scripts/chat.js"></script>
+<script src="scripts/dump.js"></script>
+</html>

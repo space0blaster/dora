@@ -1,0 +1,38 @@
+body {
+    background:#EDEDED;
+}
+input, button, select, textarea{
+    outline:none;
+    -webkit-appearance:none;
+}
+#file{
+    display:none;
+}
+#bar{
+    z-index:1;
+    position:fixed;
+    height:30px;
+    left:0;
+    right:100px;
+    top:0;
+    -webkit-user-select:none;
+    -webkit-app-region:drag;
+    cursor:pointer;
+}
+#settings{
+    position:fixed;
+    top:10px;
+    right:10px;
+    border:0;
+    background:transparent;
+    -webkit-appearance:none;
+    font-size:15px;
+    color:#777777;
+    cursor:pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background:#333333;
+    }
+}

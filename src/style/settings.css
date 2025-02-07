@@ -1,0 +1,70 @@
+#settingsTitle{
+    position:absolute;
+    top:10px;
+    left:0;
+    right:0;
+    font-family:'Teachers',sans-serif;
+    font-size:15px;
+    font-weight:800;
+    text-align:center;
+    color:#777777;
+}
+#settings{
+    position:absolute;
+    top:40px;
+    left:0;
+    right:0;
+    border-top:1px solid #CCCCCC;
+}
+.settingsLabel{
+    font-family:'Teachers',sans-serif;
+    font-size:14px;
+    color:#555555;
+}
+.settingsField{
+    background:#FAFAFA;
+    border:1px solid #DDDDDD;
+    padding:10px;
+    border-radius:8px;
+    font-family:'Teachers',sans-serif;
+    font-size:14px;
+    color:#333333;
+    width:200px;
+}
+.settingsField::placeholder{
+    color:#CCCCCC;
+}
+.settingsButton{
+    background:#555555;
+    color:#EDEDED;
+    padding:10px;
+    border-radius:8px;
+    cursor:pointer;
+    font-family:'Teachers',sans-serif;
+    font-size:14px;
+    border:0;
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background:#222222 !important;
+    }
+    #settings{
+        border-top:1px solid #333333;
+    }
+    .settingsLabel{
+        color:#777777;
+    }
+    .settingsField{
+        background:#333333;
+        border:1px solid #333333;
+        color:#DDDDDD;
+    }
+    .settingsField::placeholder{
+        color:#555555;
+    }
+    .settingsButton{
+        background:#CCCCCC;
+        color:#333333;
+    }
+}
