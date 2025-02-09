@@ -90,7 +90,6 @@ This will output your executable to a new sub folder in the `dora` directory loc
 * I am using [artifish/llama3.2-uncensored](https://ollama.com/artifish/llama3.2-uncensored) because asking some models for private files freaks them out.
 * You can try and use other uncensored models, I picked this one because it's relatively small and does well locally.
 * You can also change your embedding model, the default `nomic-embed-text` does the job fine though. You can just use the embedding models that come with ChromaDB, just make sure you specify each time you embed and query.
-* I'll be cleaning up the code over the next few days.
 
 ## Roadmap
 * File content embedding
