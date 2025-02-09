@@ -16,7 +16,7 @@ let mainWindowId;
 const createSettingsWindow=()=>{
   const settingsWindow = new BrowserWindow({
     width: 600,
-    height: 525,
+    //height: 525,
     titleBarStyle:titleBarVisibility,
     trafficLightPosition:{x:10,y:10},
     webPreferences: {

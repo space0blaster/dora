@@ -10,16 +10,13 @@ class DoraSettings {
         config.ignored.forEach((ignored,i)=>{
             this.tag(ignored,i);
             if(i===config.ignored.length-1) {
-                let tag=E.div(E.get('settingsTagBox'),'settingsTagItem settingsTagItemNew','');
-                let t=E.div(tag,'settingsTagItemText','');
-                t.contentEditable=true;
-                t.innerText='New Item';
-                t.onkeydown=(e)=>{
+                let tag=E.input(E.get('settingsTagBox'),'text','settingsTagItem settingsTagItemNew','','New Item');
+                tag.onkeydown=(e)=>{
                     if(e.keyCode===13) {
                         e.preventDefault();
-                        config.ignored.push(t.innerText);
-                        this.tag(t.innerText,config.ignored.length-1);
-                        t.innerText='New Item';
+                        config.ignored.push(tag.innerText);
+                        this.tag(tag.value,config.ignored.length-1);
+                        tag.value='';
                     }
                 };
             }

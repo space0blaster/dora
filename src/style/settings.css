@@ -23,6 +23,8 @@
 }
 #settingsTagBox{
     display:flex;
+    flex-wrap:wrap;
+    gap:5px;
 }
 #settingsTagBoxItems{
     display:flex;
@@ -51,7 +53,6 @@
     background:#FAFAFA !important;
     color:#444444 !important;
     border:1px solid #DDDDDD !important;
-    margin-left:7px;
 }
 .settingsField{
     background:#FAFAFA;
@@ -90,6 +91,7 @@
     border-radius:8px;
     cursor:pointer;
     font-family:'Teachers',sans-serif;
+    font-weight:500;
     font-size:14px;
     border:0;
 }
@@ -104,7 +106,7 @@
     .settingsLabel{
         color:#777777;
     }
-    .settingsField{
+    .settingsField, .settingsSelect{
         background:#333333;
         border:1px solid #333333;
         color:#DDDDDD;
@@ -113,7 +115,13 @@
         color:#555555;
     }
     .settingsButton{
-        background:#CCCCCC;
+        background:#EDEDED;
         color:#333333;
+    }
+
+    .settingsTagItemNew{
+        color:#EDEDED !important;
+        background:#555555 !important;
+        border:1px solid #555555 !important;
     }
 }
