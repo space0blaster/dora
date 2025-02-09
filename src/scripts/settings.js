@@ -14,7 +14,7 @@ class DoraSettings {
                 tag.onkeydown=(e)=>{
                     if(e.keyCode===13) {
                         e.preventDefault();
-                        config.ignored.push(tag.innerText);
+                        config.ignored.push(tag.value);
                         this.tag(tag.value,config.ignored.length-1);
                         tag.value='';
                     }
