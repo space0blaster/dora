@@ -1,6 +1,7 @@
 //
 let config={
     targetDirectory:os.homedir(),
+    ignored:['.DS_Store','.localized','.idea','node_modules'],
     ollamaHost:'localhost',
     ollamaPort:11434,
     chromaHost:'localhost',

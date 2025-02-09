@@ -31,6 +31,10 @@
             <td><input type="text" class="settingsField" id="targetDirectory" placeholder="Target Directory" /></td>
         </tr>
         <tr>
+            <td><div class="settingsLabel"><i class="fa-solid fa-folder-xmark"></i> Ignored Items</div></td>
+            <td><div id="settingsTagBox"><div id="settingsTagBoxItems"></div></div></td>
+        </tr>
+        <tr>
             <td><br/></td>
             <td><br/></td>
         </tr>
@@ -40,7 +44,7 @@
         </tr>
         <tr>
             <td><div class="settingsLabel"><i class="fa-solid fa-brain-circuit"></i> Ollama Port</div></td>
-            <td><input type="number" class="settingsField" id="ollamaPort" placeholder="Ollama Port" value="11434" /></td>
+            <td><input type="number" class="settingsField settingsFieldShort" id="ollamaPort" placeholder="Ollama Port" value="11434" /></td>
         </tr>
         <tr>
             <td><br/></td>
@@ -52,7 +56,7 @@
         </tr>
         <tr>
             <td><div class="settingsLabel"><i class="fa-solid fa-database"></i> Chroma Port</div></td>
-            <td><input type="number" class="settingsField" id="chromaPort" placeholder="Chroma Port" value="8000" /></td>
+            <td><input type="number" class="settingsField settingsFieldShort" id="chromaPort" placeholder="Chroma Port" value="8000" /></td>
         </tr>
         <tr>
             <td><br/></td>
@@ -60,11 +64,11 @@
         </tr>
         <tr>
             <td><div class="settingsLabel"><i class="fa-solid fa-square-binary"></i> Embed Model</div></td>
-            <td><select class="settingsField" id="embedModel"></select></td>
+            <td><select class="settingsSelect" id="embedModel"></select></td>
         </tr>
         <tr>
             <td><div class="settingsLabel"><i class="fa-solid fa-comment"></i> Chat Model</div></td>
-            <td><select class="settingsField" id="chatModel"></select></td>
+            <td><select class="settingsSelect" id="chatModel"></select></td>
         </tr>
         <tr>
             <td></td>

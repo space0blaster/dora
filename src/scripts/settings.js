@@ -1,10 +1,29 @@
-class Settings {
-    static async settings() {
+class DoraSettings {
+    constructor() {}
+    async settings() {
         E.get('targetDirectory').value=config.targetDirectory;
         E.get('ollamaHost').value=config.ollamaHost;
         E.get('ollamaPort').value=config.ollamaPort;
         E.get('chromaHost').value=config.chromaHost;
         E.get('chromaPort').value=config.chromaPort;
+        //
+        config.ignored.forEach((ignored,i)=>{
+            this.tag(ignored,i);
+            if(i===config.ignored.length-1) {
+                let tag=E.div(E.get('settingsTagBox'),'settingsTagItem settingsTagItemNew','');
+                let t=E.div(tag,'settingsTagItemText','');
+                t.contentEditable=true;
+                t.innerText='New Item';
+                t.onkeydown=(e)=>{
+                    if(e.keyCode===13) {
+                        e.preventDefault();
+                        config.ignored.push(t.innerText);
+                        this.tag(t.innerText,config.ignored.length-1);
+                        t.innerText='New Item';
+                    }
+                };
+            }
+        });
         //
         let selEmbed=E.get('embedModel');
         let selChat=E.get('chatModel');
@@ -32,6 +51,18 @@ class Settings {
         };
         //
     };
+    tag(ignored,i) {
+        let tag=E.div(E.get('settingsTagBoxItems'),'settingsTagItem','');
+        let t=E.div(tag,'settingsTagItemText','');
+        t.innerText=ignored;
+        let x=E.div(tag,'','');
+        x.innerHTML='<i class="fa-solid fa-xmark"></i>';
+        x.onclick=()=>{
+            E.get('settingsTagBoxItems').removeChild(tag);
+            config.ignored.splice(i,1);
+        };
+    }
 }
 
-Settings.settings();
+let settings=new DoraSettings();
+settings.settings();

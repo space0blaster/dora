@@ -21,6 +21,38 @@
     font-size:14px;
     color:#555555;
 }
+#settingsTagBox{
+    display:flex;
+}
+#settingsTagBoxItems{
+    display:flex;
+    flex-wrap:wrap;
+    gap:3px;
+}
+.settingsTagItem{
+    background:#FFCCCC;
+    color:#801515;
+    border:1px solid #FFAAAA;
+    padding:5px;
+    border-radius:5px;
+    font-size:11px;
+    font-family:'Teachers',sans-serif;
+    width:fit-content;
+    display:flex;
+}
+.settingsTagItemText{
+    background:transparent;
+    border:0;
+    width:fit-content;
+    margin-right:5px;
+    outline:none;
+}
+.settingsTagItemNew{
+    background:#FAFAFA !important;
+    color:#444444 !important;
+    border:1px solid #DDDDDD !important;
+    margin-left:7px;
+}
 .settingsField{
     background:#FAFAFA;
     border:1px solid #DDDDDD;
@@ -31,8 +63,25 @@
     color:#333333;
     width:200px;
 }
+.settingsFieldShort{
+    width:80px !important;
+}
 .settingsField::placeholder{
     color:#CCCCCC;
+}
+.settingsSelect{
+    background:#FAFAFA;
+    border:1px solid #DDDDDD;
+    padding:10px;
+    border-radius:8px;
+    font-family:'Teachers',sans-serif;
+    font-size:14px;
+    color:#333333;
+    width:220px;
+    background-image:url("../images/arrow.png");
+    background-size:20px 20px;
+    background-position:190px 10px;
+    background-repeat:no-repeat;
 }
 .settingsButton{
     background:#555555;
