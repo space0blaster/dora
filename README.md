@@ -2,12 +2,13 @@
 
 Local drive, AI assisted deep search.
 
+**For a cloud managed version with agentic capabilities, please see [Dora](https://dorafiles.com)**
+
 ![Dora hero image](readme-assets/hero.png)
 
 
 ## About
 Dora is a local search tool that allows you to search files on your local drive using natural language.
-*For a cloud managed version with agentic capabilities, please see [Dora](https://dorafiles.com)*
 
 ## Installation
 
