@@ -7,6 +7,7 @@ Local drive, AI assisted deep search.
 
 ## About
 Dora is a local search tool that allows you to search files on your local drive using natural language.
+*For a cloud managed version with agentic capabilities, please see [Dora](https://dorafiles.com)*
 
 ## Installation
 
@@ -38,7 +39,7 @@ sh start.sh
 ### Without Docker
 Assuming you already have Ollama and ChromaDB installed and running, you can simply just run the below commands to run the electron app by itself.
 Please note, if you already have Ollama, be sure to pull `nomic-embed-text` and `artifish/llama3.2-uncensored` as they are used. If you'd like, you can run your own choice of embedding and chat models. Configure your config/settings modal with your models.
-Dora defaults to the default ports for both Ollama and ChromaDB, `14434` and `8000` respectively, and will point to `localhost` as a base host for both.
+Dora defaults to the default ports for both Ollama and ChromaDB, `11434` and `8000` respectively, and will point to `localhost` as a base host for both.
 
 To run the electron app:
 ```bash
@@ -81,6 +82,7 @@ This will output your executable to a new sub folder in the `dora` directory loc
 
 ---
 
+If you want an executable that is cloud-based using the latest SOTA models, please see [Dora](https://dorafiles.com).
 
 ## Notes
 1. If you have a lot of files here, I recommend pointing it to something less dense so you can try Dora out first without the crawler running for a long time; you can change this later.
@@ -91,14 +93,6 @@ This will output your executable to a new sub folder in the `dora` directory loc
 * You can try and use other uncensored models, I picked this one because it's relatively small and does well locally.
 * You can also change your embedding model, the default `nomic-embed-text` does the job fine though. You can just use the embedding models that come with ChromaDB, just make sure you specify each time you embed and query.
 
-## Roadmap
-* File content embedding
-  * Plaintext
-  * PDFs 
-  * Multimodal (images)
-
 ## License
-MIT
+Apache 2.0
 
-## Contact
-You can reach me on Twitter/X [here](https://x.com/amantsegai).
